@@ -7,11 +7,50 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="auth-container">
         <h1>Умный Трекер Финансов</h1>
+
+        <div class="auth-section" id="signup-section">
+            <h2>Регистрация</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-email">Электронная почта</label>
+                    <input type="email" id="signup-email" placeholder="Введите почту" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Пароль</label>
+                    <input type="password" id="signup-password" placeholder="Введите пароль" required>
+                </div>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <p>Уже есть аккаунт? <a href="#" id="show-login">Войти</a></p>
+        </div>
+
+        <div class="auth-section" id="login-section" style="display: none;">
+            <h2>Вход</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Электронная почта</label>
+                    <input type="email" id="login-email" placeholder="Введите почту" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" placeholder="Введите пароль" required>
+                </div>
+                <button type="submit">Войти</button>
+            </form>
+            <p>Нет аккаунта? <a href="#" id="show-signup">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <div class="container" id="app-container" style="display: none;">
+        <h1>Умный Трекер Финансов</h1>
+
+        <button id="logout-btn" class="logout-btn">Выйти</button>
 
         <div class="input-section">
             <h2>Добавить Транзакцию</h2>

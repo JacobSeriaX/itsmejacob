@@ -1,5 +1,4 @@
 /* style.css */
-/* Оставляем без изменений или используем предыдущие стили */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,6 +27,40 @@ h1, h2 {
     color: #ffffff;
 }
 
+.auth-section {
+    margin-bottom: 40px;
+}
+
+.auth-section p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth-section a:hover {
+    text-decoration: underline;
+}
+
+.logout-btn {
+    background: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    float: right;
+}
+
+.logout-btn:hover {
+    background: #a71d2a;
+}
+
 .input-section, .summary-section, .transactions-section {
     margin-bottom: 40px;
 }
@@ -46,6 +79,8 @@ label {
 input[type="text"],
 input[type="number"],
 input[type="date"],
+input[type="email"],
+input[type="password"],
 select {
     width: 100%;
     padding: 10px;
